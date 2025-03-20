@@ -21,3 +21,18 @@ todoInput.addEventListener("keydown", function (event) {
         console.log(todoInput.value);
     }
 });
+
+let lista = document.getElementById("lista");
+
+let itens = ["Pão", "Maçã", "Arroz", "Massa"];
+
+itens.forEach(function(texto){
+    let item = document.createElement("li");
+    item.textContent = texto;
+
+    item.addEventListener("click", function(){
+        lista.removeChild(item);
+    });
+
+    lista.appendChild(item);
+});
